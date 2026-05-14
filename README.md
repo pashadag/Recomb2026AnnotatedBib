@@ -9,3 +9,8 @@ This is a more expository/educational paper about how to take a poorly defined b
 
 In a later WABI 2025 [paper], we removed the assumptions regarding no repeats to derive a new repeat-aware estimator.
 
+References
+* Ondov, B.D., Treangen, T.J., Melsted, P. et al. [Mash: fast genome and metagenome distance estimation using MinHash](https://doi.org/10.1186/s13059-016-0997-x). Genome Biol 17, 132 (2016). 
+* Wu, H, and Medvedev, P. [The gift of novelty: repeat-robust k-mer-based estimators of mutation rates](https://www.biorxiv.org/cgi/content/short/2026.04.01.715966). ISMB (2026). 
+* Chen, Ke*, Li, Xiang*, Shi, Qian, Shao, Mingfu‡, and Medvedev, Paul‡. [Hash functions in nucleotide sequence analysis](https://doi.org/10.1101/gr.281453.125). Genome Research, 36:887–902 (2026).
+

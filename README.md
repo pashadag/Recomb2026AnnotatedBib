@@ -18,16 +18,17 @@ Compact data structures in general are covered in an excellent [textbook](https:
 For data structures of k-mer sets specifically, I refer to a [survey](https://doi.org/10.1145/3445967) we wrote in ACM Computing Surveys. 
 We also wrote a similar [survey](https://doi.org/10.1101/866756) more specifically for sets of k-mer sets.
 
-* Fatemeh Almodaresi, Hirak Sarkar, Avi Srivastava, and Rob Patro [A space and time-efficient index for the compacted colored de Bruijn graph](https://doi.org/10.1093/bioinformatics/bty292), ISMB (2018).
-* Giulio Ermanno Pibiri [Sparse and skew hashing of k-mers](https://doi.org/10.1093/bioinformatics/btac245). ISMB (2022)
-* Rob Patro, Geet Duggal, Michael I Love, Rafael A Irizarry, Carl Kingsford [Salmon provides fast and bias-aware quantification of transcript expression](https://doi.org/10.1038/nmeth.4197).  Nature Methods 14:417–419 (2017).
+I also refer to work that illustrates practical impact of these data structures. The underlying data structures I refer to are [Rainbowfish](https://doi.org/10.1093/bioinformatics/bty292) and [SShash](https://doi.org/10.1093/bioinformatics/btac245). These were deployed as part of the [Salmon](https://doi.org/10.1038/nmeth.4197) software.
+
+### Theoretical analysis of edit distance algorithms 
+I only touched upon this topic. A much more extensive exploration of the topic is in a [survey](https://doi.org/10.1145/3582490) in the Communications of the ACM.
+I also referred to this [paper](https://doi.org/10.1101/gr.277637.122)  proving fast run time for the seed-chain-and-exten.
 
 
 
+My starting point for discussing ANI estimation is the [Ondov et al. Mash paper](https://doi.org/10.1186/s13059-016-0997-x). This paper presented the Mash estimator for ANI estimation. The estimator uses a Poisson approximation to a binomial; however, it was later [observed](https://doi.org/10.1186/s13059-019-1632-4) and later described in our own [paper](https://doi.org/10.1093/bioinformatics/btac244) that a Poisson approximation can be easily replaced by the exact binomial to obtain a more accurate estimator. This is the estimator I refer to as the Mash* estimator in the talk.
 
-My starting point for discussing ANI estimation is the [Ondov et al. Mash paper](https://doi.org/10.1186/s13059-016-0997-x). This paper presented the Mash estimator for ANI estimation. The estimator uses a Poisson approximation to a binomial; however, it was later observed in [sarm] and later described in our own [paper] that a Poisson approximation can be easily replaced by the exact binomial to obtain a more accurate estimator. This is the estimator I refer to as the Mash estimator in the talk.
-
-We introduced the k-span model in a RECOMB 2021 [paper] and proved a confidence interval for the Mash estimator in this model (among other things). 
+We introduced the k-span model in  [RECOMB 2021](https://doi.org/10.1101/2021.01.15.426881) and proved a confidence interval for the Mash estimator in this model (among other things). 
 
 I refer in the talk to my [paper] on modeling biological problems in computer science. 
 This is a more expository/educational paper about how to take a poorly defined biological problem and formalize it into a model that is well-defined and useful. The k-span model is an example of such a process. 
@@ -36,10 +37,6 @@ In a later WABI 2025 [paper], we removed the assumptions regarding no repeats to
 
 ## References
 
-* Paul Medvedev [Theoretical analysis of edit distance algorithms: an applied perspective](https://doi.org/10.1145/3582490). Communications of the ACM, 66(12):64-71 (2023).
-* Jim Shaw and Yun William Yu [Proving sequence aligners can guarantee accuracy in almost O(m log n) time through an average-case analysis of the seed-chain-extend heuristic](https://doi.org/10.1101/gr.277637.122). Genome Research 33(7):1175–1187 (2023). 
-* Ondov, B.D., Treangen, T.J., Melsted, P. et al. [Mash: fast genome and metagenome distance estimation using MinHash](https://doi.org/10.1186/s13059-016-0997-x). Genome Biol 17, 132 (2016).
-* Shahab Sarmashghi, Kristine Bohmann, M Thomas P. Gilbert, Vineet Bafna, Siavash Mirarab [Skmer: assembly-free and alignment-free sample identification using genome skims](https://doi.org/10.1186/s13059-019-1632-4). Genome Biology 20:34 (2019).  
  * Paul Medvedev [Modeling Biological Problems in Computer Science: A Case Study in Genome Assembly](https://arxiv.org/pdf/1706.05429). Briefings in Bioinformatics, 20(4):1376-1383 (2019). [Slides](https://www.dropbox.com/sh/x11d58877w07nlj/AABVNqMLwiVEosZGs089O65Sa?dl=0)
 * Antonio Blanca†, Robert S. Harris†, David Koslicki†, Paul Medvedev† [The statistics of k-mers from a sequence undergoing a simple mutation process without spurious matches](https://doi.org/10.1101/2021.01.15.426881). RECOMB (2021). [slides](http://medvedevgroup.com/wp-content/uploads/DSB21-talk.pdf) and [talk](https://www.dropbox.com/s/kshqzwx73xzpnh8/The%20statistics%20of%20k-mers%20from%20a%20sequence%20undergoing%20a%20simple%20mutation%20process%20without%20spurious%20matches%20.mp4?dl=0)
 * Haonan Wu, Antonio Blanca‡ and Paul Medvedev‡ [K-mer-based estimators of the substitution rate between repetitive sequences](https://doi.org/10.1101/2025.06.19.660607). WABI (2025).

@@ -16,7 +16,7 @@ The vignettes on compact data structures and short read genome assembly analysis
 ### Compact data structures for k-mers
 Compact data structures in general are covered in an excellent [textbook](https://www.cambridge.org/core/books/compact-data-structures/68A5983E6F1176181291E235D0B7EB44) by Gonzalo Navarro.
 For data structures of k-mer sets specifically, I refer to a [survey](https://doi.org/10.1145/3445967) we wrote in ACM Computing Surveys. 
-We also wrote a similar [survey](https://doi.org/10.1101/866756) more specifically for sets of k-mer sets.
+We also wrote a similar [survey](https://doi.org/10.1101/gr.260604.119) more specifically for sets of k-mer sets.
 
 I also refer to work that illustrates practical impact of these data structures. The underlying data structures I refer to are [Rainbowfish](https://doi.org/10.1093/bioinformatics/bty292) and [SShash](https://doi.org/10.1093/bioinformatics/btac245). These were deployed as part of the [Salmon](https://doi.org/10.1038/nmeth.4197) software.
 

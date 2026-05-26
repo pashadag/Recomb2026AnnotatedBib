@@ -24,24 +24,23 @@ I also refer to work that illustrates practical impact of these data structures.
 I only touched upon this topic. A much more extensive exploration of the topic is in a [survey](https://doi.org/10.1145/3582490) in the Communications of the ACM.
 I also referred to this [paper](https://doi.org/10.1101/gr.277637.122)  proving fast run time for the seed-chain-and-exten.
 
+## ANI esimation
 
+### Mash 
+My starting point for discussing ANI estimation is the [Mash paper](https://doi.org/10.1186/s13059-016-0997-x). This paper presented the Mash estimator for ANI estimation. The estimator uses a Poisson approximation to a Binomial; however, it was later [observed](https://doi.org/10.1186/s13059-019-1632-4) and later described in our own [paper](https://doi.org/10.1093/bioinformatics/btac244) that a Poisson approximation can be easily replaced by the exact Binomial to obtain a more accurate estimator. This is the estimator I refer to as the Mash* estimator in the talk.
 
-My starting point for discussing ANI estimation is the [Ondov et al. Mash paper](https://doi.org/10.1186/s13059-016-0997-x). This paper presented the Mash estimator for ANI estimation. The estimator uses a Poisson approximation to a binomial; however, it was later [observed](https://doi.org/10.1186/s13059-019-1632-4) and later described in our own [paper](https://doi.org/10.1093/bioinformatics/btac244) that a Poisson approximation can be easily replaced by the exact binomial to obtain a more accurate estimator. This is the estimator I refer to as the Mash* estimator in the talk.
+### Formalizing the ANI estimation problem without repeats
+I briefly refer to the challenges of taking a poorly defined biological problem and formalizing it into a model that is well-defined and useful. 
+I cover this in a lot more detail in a paper [Modeling Biological Problems in Computer Science: A Case Study in Genome Assembly](https://arxiv.org/pdf/1706.05429), with associated [slides](https://www.dropbox.com/sh/x11d58877w07nlj/AABVNqMLwiVEosZGs089O65Sa?dl=0).
 
-We introduced the k-span model in  [RECOMB 2021](https://doi.org/10.1101/2021.01.15.426881) and proved a confidence interval for the Mash estimator in this model (among other things). 
+### K-span model
+We introduced the k-span model in  [RECOMB 2021](https://doi.org/10.1101/2021.01.15.426881) and proved a confidence interval for the Mash estimator in this model. The paper contains many more results that can be derived in this model. There are also [slides](http://medvedevgroup.com/wp-content/uploads/DSB21-talk.pdf) and a [talk](https://www.dropbox.com/s/kshqzwx73xzpnh8/The%20statistics%20of%20k-mers%20from%20a%20sequence%20undergoing%20a%20simple%20mutation%20process%20without%20spurious%20matches%20.mp4?dl=0).
 
-I refer in the talk to my [paper] on modeling biological problems in computer science. 
-This is a more expository/educational paper about how to take a poorly defined biological problem and formalize it into a model that is well-defined and useful. The k-span model is an example of such a process. 
+### Repeat-robust estimation
+The repeat-robust estimator I presented is fully described in a WABI 2025 [paper]. 
 
-In a later WABI 2025 [paper], we removed the assumptions regarding no repeats to derive a new repeat-aware estimator.
-
-## References
-
- * Paul Medvedev [Modeling Biological Problems in Computer Science: A Case Study in Genome Assembly](https://arxiv.org/pdf/1706.05429). Briefings in Bioinformatics, 20(4):1376-1383 (2019). [Slides](https://www.dropbox.com/sh/x11d58877w07nlj/AABVNqMLwiVEosZGs089O65Sa?dl=0)
-* Antonio Blanca†, Robert S. Harris†, David Koslicki†, Paul Medvedev† [The statistics of k-mers from a sequence undergoing a simple mutation process without spurious matches](https://doi.org/10.1101/2021.01.15.426881). RECOMB (2021). [slides](http://medvedevgroup.com/wp-content/uploads/DSB21-talk.pdf) and [talk](https://www.dropbox.com/s/kshqzwx73xzpnh8/The%20statistics%20of%20k-mers%20from%20a%20sequence%20undergoing%20a%20simple%20mutation%20process%20without%20spurious%20matches%20.mp4?dl=0)
-* Haonan Wu, Antonio Blanca‡ and Paul Medvedev‡ [K-mer-based estimators of the substitution rate between repetitive sequences](https://doi.org/10.1101/2025.06.19.660607). WABI (2025).
-* Wu, H, and Medvedev, P. [The gift of novelty: repeat-robust k-mer-based estimators of mutation rates](https://www.biorxiv.org/cgi/content/short/2026.04.01.715966). ISMB (2026). 
-* Mahmudur Rahman Hera, Paul Medvedev, David Koslicki and Antonio Blanca [Estimation of substitution and indel rates via k-mer statistics](https://doi.org/10.1101/2025.05.14.653858), WABI (2025).
-* Mahdi Belbasi†, Antonio Blanca†, Robert S. Harris†, David Koslicki†, and Paul Medvedev† [The minimizer Jaccard estimator is biased and inconsistent](https://doi.org/10.1093/bioinformatics/btac244), ISMB (2022). [talk](https://youtu.be/01U8jX2GTX8) and [slides](http://medvedevgroup.com/wp-content/uploads/minimizer-jaccard-slides-on-website.pdf)
+### More to this story
+More repeat robust estimators are presented in an [ISMB 2026 paper](https://www.biorxiv.org/cgi/content/short/2026.04.01.715966), with an added focus on how to make use of count information. 
+I also mention a [WABI 2025 paper](https://doi.org/10.1101/2025.05.14.653858) on how to handle the presence of insertions and deletions as well as an [ISMB 2022 paper](https://doi.org/10.1093/bioinformatics/btac244) on how the use of minimizer sketching can add substantial bias to ANI estimation. That paper also has an associated [talk](https://youtu.be/01U8jX2GTX8) and [slides](http://medvedevgroup.com/wp-content/uploads/minimizer-jaccard-slides-on-website.pdf).
 
 

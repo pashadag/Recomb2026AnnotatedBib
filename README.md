@@ -24,8 +24,6 @@ I also refer to work that illustrates practical impact of these data structures.
 I only touched upon this topic. A much more extensive exploration of the topic is in a [survey](https://doi.org/10.1145/3582490) in the Communications of the ACM.
 I also referred to this [paper](https://doi.org/10.1101/gr.277637.122)  proving fast run time for the seed-chain-and-exten.
 
-## ANI esimation
-
 ### Mash 
 My starting point for discussing ANI estimation is the [Mash paper](https://doi.org/10.1186/s13059-016-0997-x). This paper presented the Mash estimator for ANI estimation. The estimator uses a Poisson approximation to a Binomial; however, it was later [observed](https://doi.org/10.1186/s13059-019-1632-4) and later described in our own [paper](https://doi.org/10.1093/bioinformatics/btac244) that a Poisson approximation can be easily replaced by the exact Binomial to obtain a more accurate estimator. This is the estimator I refer to as the Mash* estimator in the talk.
 
@@ -37,7 +35,7 @@ I cover this in a lot more detail in a paper [Modeling Biological Problems in Co
 We introduced the k-span model in  [RECOMB 2021](https://doi.org/10.1101/2021.01.15.426881) and proved a confidence interval for the Mash estimator in this model. The paper contains many more results that can be derived in this model. There are also [slides](http://medvedevgroup.com/wp-content/uploads/DSB21-talk.pdf) and a [talk](https://www.dropbox.com/s/kshqzwx73xzpnh8/The%20statistics%20of%20k-mers%20from%20a%20sequence%20undergoing%20a%20simple%20mutation%20process%20without%20spurious%20matches%20.mp4?dl=0).
 
 ### Repeat-robust estimation
-The repeat-robust estimator I presented is fully described in a WABI 2025 [paper]. 
+The repeat-robust estimator I presented is fully described in a WABI 2025 [paper](https://doi.org/10.1101/2025.06.19.660607). 
 
 ### More to this story
 More repeat robust estimators are presented in an [ISMB 2026 paper](https://www.biorxiv.org/cgi/content/short/2026.04.01.715966), with an added focus on how to make use of count information. 

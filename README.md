@@ -1,6 +1,8 @@
 # Annotated bibliography to match my talk at RECOMB 2026
 Below, I list the papers that I mention in my talk and explain the context. I link to the appropriate journal sites, but I also have a [Dropbox folder](https://www.dropbox.com/scl/fo/euxtpgg7banb4qfxr9e6c/AITE5-4sMbzOey0DPcp-bDk?rlkey=1384unr4tkhbsjg0r50612fn8&st=vhlhffta&dl=0) with all mentioned papers where I'm a coauthor for public access, in case any of them are behind paywalls.
 
+The slides are available [here](26_recomb.pdf).
+
 ### Algorithm engineering
 I cite a [paper](https://doi.org/10.1007/978-3-642-03456-5_22) by Peter Sanders that goes in great detail on the schematic of algorithm engineering that I showed.
 
